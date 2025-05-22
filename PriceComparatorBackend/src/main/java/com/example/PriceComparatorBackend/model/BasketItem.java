@@ -2,7 +2,7 @@ package com.example.PriceComparatorBackend.model;
 
 public class BasketItem {
     private Product product;
-    private double quantity; // cantitatea dorită în coș
+    private double quantity;
 
     public BasketItem(Product product, double quantity) {
         this.product = product;

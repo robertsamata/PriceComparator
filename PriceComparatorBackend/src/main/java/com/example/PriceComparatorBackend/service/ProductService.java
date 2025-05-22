@@ -40,6 +40,4 @@ public class ProductService {
                 .filter(d -> d.getFromDate().isEqual(now) || d.getFromDate().isAfter(now.minusDays(1)))
                 .collect(Collectors.toList());
     }
-
-    // other features ...
 }

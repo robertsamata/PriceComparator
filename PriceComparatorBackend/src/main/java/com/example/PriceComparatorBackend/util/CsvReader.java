@@ -25,7 +25,7 @@ public class CsvReader {
             reader.readNext(); // skip header
             while ((line = reader.readNext()) != null) {
                 if (line.length < 7) {
-                    System.out.println("Linie invalidă (nu are 7 coloane): " + Arrays.toString(line));
+                    System.out.println(" error " + Arrays.toString(line));
                     continue;
                 }
 
@@ -61,7 +61,7 @@ public class CsvReader {
 
             while ((line = reader.readNext()) != null) {
                 if (line.length < 9) {
-                    System.out.println("Linie invalidă (nu are 9 coloane): " + Arrays.toString(line));
+                    System.out.println(" error " + Arrays.toString(line));
                     continue;
                 }
 

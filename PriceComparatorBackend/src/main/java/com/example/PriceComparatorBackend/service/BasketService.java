@@ -12,8 +12,6 @@ import java.util.Map;
 
 @Service
 public class BasketService {
-
-    // Metoda care face split-ul coșului în două liste
     public Map<String, List<BasketItem>> splitBasketByDiscount(List<BasketItem> basket, List<Discount> discounts, LocalDate date) {
         List<BasketItem> discountedItems = new ArrayList<>();
         List<BasketItem> nonDiscountedItems = new ArrayList<>();
@@ -36,17 +34,5 @@ public class BasketService {
         result.put("nonDiscounted", nonDiscountedItems);
 
         return result;
-    }
-
-    // Exemplu simulare încărcare basket - în realitate încarci din DB sau sesiune
-    public List<BasketItem> loadUserBasket() {
-        // TODO: Încarcă lista produselor din coșul utilizatorului
-        return List.of(); // momentan gol
-    }
-
-    // Exemplu simulare încărcare discounturi active
-    public List<Discount> loadCurrentDiscounts() {
-        // TODO: Încarcă discounturile active valabile
-        return List.of(); // momentan gol
     }
 }
